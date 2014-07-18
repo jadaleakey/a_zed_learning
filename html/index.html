@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Kindergarten - Where Love Lives</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Your description">
-<meta name="keywords" content="Your keywords">
-<meta name="author" content="Your name">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>Kindergarten - Where Love Lives</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
-<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen">    
-<link rel="stylesheet" href="css/camera.css" type="text/css" media="screen">
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/camera.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 
-<script type="text/javascript" src="js/jquery.js"></script>  
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/superfish.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/superfish.js"></script>
 
-<script type="text/javascript" src="js/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.totop.js"></script>
 
-<script type="text/javascript" src="js/camera.js"></script>
-<script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
+    <script type="text/javascript" src="js/camera.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
 
-<script type="text/javascript" src="js/jquery.spritely-0.6.1.js"></script>
+    <script type="text/javascript" src="js/jquery.spritely-0.6.1.js"></script>
 
-<script type="text/javascript" src="js/jquery.caroufredsel.js"></script>
-<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/jquery.caroufredsel.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 
-<script type="text/javascript" src="js/script.js"></script>
-<script>
-$(document).ready(function() {
-	// camera
-	$('#camera_wrap').camera({
-		//thumbnails: true
-		autoAdvance			: true,		
-		mobileAutoAdvance	: true,
-		//fx					: 'simpleFade',
-		height: '46%',
-		hover: false,
-		loader: 'none',
-		navigation: true,
-		navigationHover: false,
-		mobileNavHover: false,
-		playPause: false,
-		pauseOnClick: false,
-		pagination			: false,
-		time: 7000,
-		transPeriod: 1000,
-		minHeight: '200px'
-	});
+    <script type="text/javascript" src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            // camera
+            $('#camera_wrap').camera({
+                //thumbnails: true
+                autoAdvance: true,
+                mobileAutoAdvance: true,
+                //fx					: 'simpleFade',
+                height: '46%',
+                hover: false,
+                loader: 'none',
+                navigation: true,
+                navigationHover: false,
+                mobileNavHover: false,
+                playPause: false,
+                pauseOnClick: false,
+                pagination: false,
+                time: 7000,
+                transPeriod: 1000,
+                minHeight: '200px'
+            });
 
-	//	carouFredSel
-	$('#slider3 .carousel.main ul').carouFredSel({
-		auto: {
-			timeoutDuration: 8000					
-		},
-		responsive: true,
-		prev: '.prev3',
-		next: '.next3',
-		width: '100%',
-		scroll: {
-			items: 1,
-			duration: 1000,
-			easing: "easeOutExpo"
-		},			
-		items: {
-        	width: '500',
-			height: 'variable',	//	optionally resize item-height			  
-			visible: {
-				min: 1,
-				max: 3
-			}
-		},
-		mousewheel: false,
-		swipe: {
-			onMouse: true,
-			onTouch: true
-			}
-	});
-	$(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
-	function updateSizes_vat(){		
-		$('#slider3 .carousel.main ul').trigger("updateSizes");
-	}
-	updateSizes_vat();
+            //	carouFredSel
+            $('#slider3 .carousel.main ul').carouFredSel({
+                auto: {
+                    timeoutDuration: 8000
+                },
+                responsive: true,
+                prev: '.prev3',
+                next: '.next3',
+                width: '100%',
+                scroll: {
+                    items: 1,
+                    duration: 1000,
+                    easing: "easeOutExpo"
+                },
+                items: {
+                    width: '500',
+                    height: 'variable', //	optionally resize item-height			  
+                    visible: {
+                        min: 1,
+                        max: 3
+                    }
+                },
+                mousewheel: false,
+                swipe: {
+                    onMouse: true,
+                    onTouch: true
+                }
+            });
+            $(window).bind("resize", updateSizes_vat).bind("load", updateSizes_vat);
+
+            function updateSizes_vat() {
+                $('#slider3 .carousel.main ul').trigger("updateSizes");
+            }
+            updateSizes_vat();
 
 
-}); //
-$(window).load(function() {
-	//
+        }); //
+        $(window).load(function () {
+            //
 
-}); //
-</script>		
-<!--[if lt IE 8]>
+        }); //
+    </script>
+    <!--[if lt IE 8]>
 		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>  
-	<![endif]-->    
+	<![endif]-->
 
-<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
   <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
 <![endif]-->
@@ -105,347 +107,395 @@ $(window).load(function() {
 
 <body class="main">
 
-<div id="clouds1"></div>
+    <div id="clouds1"></div>
 
-<div id="plane1"></div>
+    <div id="plane1"></div>
 
-<div id="main">
-<div id="inner">
+    <div id="main">
+        <div id="inner">
 
-<div class="top1">
-<div class="container">
-<div class="row">
-<div class="span12">
-<div class="top1_inner clearfix">
-	
-<header><div class="logo_wrapper"><a href="index.html" class="logo"><img src="images/logo.png" alt=""></a></div></header>
+            <div class="top1">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <div class="top1_inner clearfix">
 
-<div class="top2 clearfix">
-<div class="phone1">
-	<div class="txt1">Have questions? Call</div>
-	<div class="txt2">1 800 123 456 7890</div>
-</div>
-<div class="social_wrapper">
-	<ul class="social clearfix">
-	    <li><a href="#"><img src="images/social_ic1.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic2.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic3.png"></a></li>	    
-	    <li><a href="#"><img src="images/social_ic4.png"></a></li>
-	</ul>
-</div>	
-</div>
+                                <header>
+                                    <div class="logo_wrapper">
+                                        <a href="index.html" class="logo">
+                                            <img src="images/logo.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </header>
 
-</div>	
-</div>	
-</div>	
-</div>	
-</div>	
+                                <div class="top2 clearfix">
+                                    <div class="phone1">
+                                        <div class="txt1">Have questions? Call</div>
+                                        <div class="txt2">+1 876 880 3301</div>
+                                    </div>
+                                    <div class="social_wrapper">
+                                        <ul class="social clearfix">
+                                            <li>
+                                                <a href="#">
+                                                    <img src="images/social_ic1.png">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="images/social_ic2.png">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="images/social_ic3.png">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="images/social_ic4.png">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-
-<div class="menu_wrapper">
-<div class="container">
-<div class="row">
-<div class="span12">
-<div class="navbar navbar_">
-	<div class="navbar-inner navbar-inner_">
-		<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</a>
-		<div class="nav-collapse nav-collapse_ collapse">
-			<ul class="nav sf-menu clearfix">
-<li class="active"><a href="index.html">Home page</a></li>
-<li><a href="index-1.html">About</a></li>
-<li><a href="index-2.html">Services</a></li>
-<li class="sub-menu sub-menu-1"><a href="index-3.html">Classes</a>
-	<ul>
-		<li><a href="index-3.html">Lorem ipsum</a></li>
-		<li class="sub-menu sub-menu-2"><a href="index-3.html">Sit amet<em></em></a>
-			<ul>
-				<li><a href="index-3.html">lorem ipsum dolor</a></li>
-				<li><a href="index-3.html">sit amet</a></li>
-				<li><a href="index-3.html">adipiscing elit</a></li>
-				<li><a href="index-3.html">nunc suscipit</a></li>
-				<li><a href="404.html">404 page not found</a></li>
-			</ul>
-		</li>
-		<li class="sub-menu sub-menu-2"><a href="index-3.html">Adipiscing<em></em></a>
-			<ul>
-				<li><a href="index-3.html">lorem ipsum dolor</a></li>
-				<li><a href="index-3.html">sit amet</a></li>
-				<li><a href="index-3.html">adipiscing elit</a></li>
-				<li><a href="index-3.html">nunc suscipit</a></li>									
-			</ul>
-		</li>
-		<li><a href="index-3.html">Nunc suscipit</a></li>						
-	</ul>						
-</li>
-
-<li><a href="index-4.html">Gallery</a></li>
-<li><a href="index-5.html">Contacts</a></li>											
-    </ul>
-		</div>
-	</div>
-</div>	
-</div>	
-</div>	
-</div>	
-</div>
-
-<div id="slider_wrapper">
-	<div id="slider" class="clearfix">
-		<div id="camera_wrap">
-			<div data-src="images/slide01.jpg">
-				<div class="camera_caption fadeIn">
-					<div class="txt1">Give Your Child<br>Professional Basic<br>Education</div>			
-					<a href="#" class="button0">details</a>		
-				</div>     
-			</div>
-			<div data-src="images/slide02.jpg">
-				<div class="camera_caption fadeIn">
-					<div class="txt1">Professional Care<br>for Your Child</div>			
-					<a href="#" class="button0">details</a>		
-				</div>     
-			</div>
-			<div data-src="images/slide03.jpg">
-				<div class="camera_caption fadeIn">
-					<div class="txt1">Fulltime CHildcare<br>abd Education</div>			
-					<a href="#" class="button0">details</a>		
-				</div>     
-			</div>
-			
-		</div>	
-	</div>
-	<img src="images/shadow1.png" alt="" class="shadow1">
-</div>
-
-<div id="slider3_wrapper">
-<div class="container">
-<div class="row">
-<div class="span12">
-<div id="slider3">
-<a class="prev3" href="#"></a>
-<a class="next3" href="#"></a>		
-<div class="carousel-box row">
-	<div class="inner span12">			
-		<div class="carousel main">
-			<ul>
-				<li>
-					<div class="banner banner1">
-						<div class="banner_inner">
-							<a href="#">
-								<img src="images/banner1.png" alt="" class="img">
-								<div class="title">trainings</div>
-								<div class="txt">
-									<div class="txt1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit.</div>
-									<div class="txt2">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner banner2">
-						<div class="banner_inner">
-							<a href="#">
-								<img src="images/banner2.png" alt="" class="img">
-								<div class="title">Who We Are</div>
-								<div class="txt">
-									<div class="txt1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit.</div>
-									<div class="txt2">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner banner3">
-						<div class="banner_inner">
-							<a href="#">
-								<img src="images/banner3.png" alt="" class="img">
-								<div class="title">Our Classes</div>
-								<div class="txt">
-									<div class="txt1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit.</div>
-									<div class="txt2">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner banner4">
-						<div class="banner_inner">
-							<a href="#">
-								<img src="images/banner4.png" alt="" class="img">
-								<div class="title">Programs</div>
-								<div class="txt">
-									<div class="txt1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit.</div>
-									<div class="txt2">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner banner5">
-						<div class="banner_inner">
-							<a href="#">
-								<img src="images/banner5.png" alt="" class="img">
-								<div class="title">News & Events</div>
-								<div class="txt">
-									<div class="txt1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit.</div>
-									<div class="txt2">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>					
-			</ul>
-		</div>
-	</div>
-</div>
-</div>	
-</div>	
-</div>	
-</div>	
-</div>
-
-<div class="slogan1_wrapper">
-<div class="container">
-<div class="row">
-<div class="span12">
-<div class="slogan1 clearfix">
-<div class="row">
-<div class="span9">
-<div class="block1">
-	<div class="txt1">We love and take care of your children every day, every hour.</div>	
-</div>	
-</div>
-<div class="span3">
-<div class="block2">
-	<a href="#" class="join1">Join Now</a>
-</div>	
-</div>	
-</div>	
-</div>	
-</div>	
-</div>	
-</div>	
-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-<div id="inner2">
-<div id="content">
-<div class="container">
-<div class="row">
-<div class="span8">
-	
-<h1 class="c1">Welcome</h1>
+            <div class="menu_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <div class="navbar navbar_">
+                                <div class="navbar-inner navbar-inner_">
+                                    <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </a>
+                                    <div class="nav-collapse nav-collapse_ collapse">
+                                        <ul class="nav sf-menu clearfix">
+                                            <li class="active"><a href="index.html">Home page</a>
+                                            </li>
+                                            <li><a href="index-1.html">About</a>
+                                            </li>
+                                            <li><a href="index-2.html">Services</a>
+                                            </li>
+                                            <li class="sub-menu sub-menu-1"><a href="index-3.html">Classes</a>
+                                                <ul>
+                                                    <li><a href="index-3.html">Lorem ipsum</a>
+                                                    </li>
+                                                    <li class="sub-menu sub-menu-2"><a href="index-3.html">Sit amet<em></em></a>
+                                                        <ul>
+                                                            <li><a href="index-3.html">lorem ipsum dolor</a>
+                                                            </li>
+                                                            <li><a href="index-3.html">sit amet</a>
+                                                            </li>
+                                                            <li><a href="index-3.html">adipiscing elit</a>
+                                                            </li>
+                                                            <li><a href="index-3.html">nunc suscipit</a>
+                                                            </li>
+                                                            <li><a href="404.html">404 page not found</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub-menu sub-menu-2"><a href="index-3.html">Adipiscing<em></em></a>
+                                                        <ul>
+                                                            <li><a href="index-3.html">lorem ipsum dolor</a>
+                                                            </li>
+                                                            <li><a href="index-3.html">sit amet</a>
+                                                            </li>
+                                                            <li><a href="index-3.html">adipiscing elit</a>
+                                                            </li>
+                                                            <li><a href="index-3.html">nunc suscipit</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="index-3.html">Nunc suscipit</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
 
-<h3>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</h3>
+                                            <li><a href="index-4.html">Gallery</a>
+                                            </li>
+                                            <li><a href="index-5.html">Contacts</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="thumb1">
-	<div class="thumbnail clearfix">
-		<figure class="img-rounded"><img src="images/home01.jpg" alt=""></figure>
-		<div class="caption">
-			<p>
-				Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. <a href="#">Suspendisse enim arcu</a>, convallis non, cursus sed, dignissim et, est. Aenean semper aliquet libero. In ante velit, cursus ut, ultrices vitae, tempor ut, risus. Duis pulvinar. Vestibulum vel pede at sapien sodales mattis. Quisque pretium, lacus nec iaculis vehicula, arcu libero consectetuer massa, auctor aliquet mauris ligula id ipsum. 
-			</p>
-			<a href="#" class="button1">read more about us</a>
-		</div>
-	</div>
-</div>
+            <div id="slider_wrapper">
+                <div id="slider" class="clearfix">
+                    <div id="camera_wrap">
+                        <div data-src="images/slide01new.jpg">
+                            <div class="camera_caption fadeIn">
+                                <div class="txt1">Give Your Child
+                                    <br>Professional Basic
+                                    <br>Education</div>
+                                <a href="#" class="button0">details</a>	
+                            </div>
+                        </div>
+                        <div data-src="images/slide02new.jpg">
+                            <div class="camera_caption fadeIn">
+                                <div class="txt1">Professional Care
+                                    <br>for Your Child</div>
+                                <a href="#" class="button0">details</a>	
+                            </div>
+                        </div>
+                        <div data-src="images/slide03new.jpg">
+                            <div class="camera_caption fadeIn">
+                                <div class="txt1">Fulltime CHildcare
+                                    <br>abd Education</div>
+                                <a href="#" class="button0">details</a>	
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <img src="images/shadow1.png" alt="" class="shadow1">
+            </div>
+
+            <div id="slider3_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <div id="slider3">
+                                <a class="prev3" href="#"></a>
+                                <a class="next3" href="#"></a>
+                                <div class="carousel-box row">
+                                    <div class="inner span12">
+                                        <div class="carousel main">
+                                            <ul>
+                                                <li>
+                                                    <div class="banner banner1">
+                                                        <div class="banner_inner">
+                                                            <a href="index-1.html">
+                                                                <img src="images/banner1.png" alt="" class="img">
+                                                                <div class="title">trainings</div>
+                                                                <div class="txt">
+                                                                    <div class="txt1">Our teachers and assistant teachers have credentials and or training in Early Childhood and Primary School Education.</div>
+                                                                    <div class="txt2">read more</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="banner banner2">
+                                                        <div class="banner_inner">
+                                                            <a href="index-1.html">
+                                                                <img src="images/banner2.png" alt="" class="img">
+                                                                <div class="title">Who We Are</div>
+                                                                <div class="txt">
+                                                                    <div class="txt1">To provide innovative learning solutions that are congruent with current best practice and principles, ..</div>
+                                                                    <div class="txt2">read more</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="banner banner3">
+                                                        <div class="banner_inner">
+                                                            <a href="index-3.html">
+                                                                <img src="images/banner3.png" alt="" class="img">
+                                                                <div class="title">Our Classes</div>
+                                                                <div class="txt">
+                                                                    <div class="txt1">Classrooms are equipped and prepared for the size and pace of preschool aged children...</div>
+                                                                    <div class="txt2">read more</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="banner banner4">
+                                                        <div class="banner_inner">
+                                                            <a href="#">
+                                                                <img src="images/banner4.png" alt="" class="img">
+                                                                <div class="title">Special Programme</div>
+                                                                <div class="txt">
+                                                                    <div class="txt1">Special programme offers the same quality activities as our day programme with additional time to go more in depth with projects</div>
+                                                                    <div class="txt2">read more</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="banner banner5">
+                                                        <div class="banner_inner">
+                                                            <a href="#">
+                                                                <img src="images/banner5.png" alt="" class="img">
+                                                                <div class="title">News & Events</div>
+                                                                <div class="txt">
+                                                                    <div class="txt1">We update our web site weekly so that you can get the latest information about our school.</div>
+                                                                    <div class="txt2">read more</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slogan1_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <div class="slogan1 clearfix">
+                                <div class="row">
+                                    <div class="span9">
+                                        <div class="block1">
+                                            <div class="txt1">We love and take care of your children every day, every hour.</div>
+                                        </div>
+                                    </div>
+                                    <div class="span3">
+                                        <div class="block2">
+                                            <a href="#" class="join1">Join Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="inner2">
+                <div id="content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span8">
+
+                                <h1 class="c1">Welcome</h1>
+
+                                <h3>A2Zed Learning Centre is a safe, convenient and affordable option for your childs’ early childhood education needs. Make us the choice for your child’s bright start</h3>
+
+                                <div class="thumb1">
+                                    <div class="thumbnail clearfix">
+                                        <figure class="img-rounded">
+                                            <img src="images/home01_new.jpg" alt="">
+                                        </figure>
+                                        <div class="caption">
+                                            <p>
+                                                We know that searching for a learning centre for your child can be stressful, but finding the right centre can also be rewarding for your family. Finding the right centre gives you the peace of mind, that your child is growing, learning, building lifelong skills and having fun.
+                                            </p>
+                                            <p>
+
+                                                At A 2 Zed Learning Centre, we know you have many options when it comes to your child’s care. You may wonder, why use our centre than any other centre available?
+                                            </p>
+                                            <a href="pdf/a%202%20zed%20powerpoint%20content%20for%20website.pdf" class="button1" target="_blank">read more about us</a>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
 
-</div>	
-<div class="span4">
+                            </div>
+                            <div class="span4">
 
-<h2>News</h2>
+                                <h2>News</h2>
 
-<div class="date1 clearfix">
-	<div class="txt1 c1">12<br><span>jan</span></div>
-	<div class="txt2">
-		<h4 class="upper"><a href="#">Lorem ipsum dolor</a></h4>
-		sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse.
-	</div>
-</div>
+                                <div class="date1 clearfix">
+                                    <div class="txt1 c1">12
+                                        <br><span>jul</span>
+                                    </div>
+                                    <div class="txt2">
+                                        <h4 class="upper"><a href="#">A2ZedLearing Centre Managment Team Formed</a></h4>
+                                        A group of professionals came together to form a hi tech learning centre for preschoolers.
+                                    </div>
+                                </div>
 
-<div class="date1 clearfix">
-	<div class="txt1 c2">24<br><span>feb</span></div>
-	<div class="txt2">
-		<h4 class="upper"><a href="#">Lorem ipsum dolor</a></h4>
-		sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse.
-	</div>
-</div>
+                                <div class="date1 clearfix">
+                                    <div class="txt1 c2">24
+                                        <br><span>sep</span>
+                                    </div>
+                                    <div class="txt2">
+                                        <h4 class="upper"><a href="#">Accepting Students Now</a></h4>
+                                        Contact us now to register your children with us.
+                                    </div>
+                                </div>
 
-<div class="date1 clearfix">
-	<div class="txt1 c3">4<br><span>mar</span></div>
-	<div class="txt2">
-		<h4 class="upper"><a href="#">Lorem ipsum dolor</a></h4>
-		sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse.
-	</div>
-</div>
 
-<div class="date1 clearfix">
-	<div class="txt1 c4">13<br><span>may</span></div>
-	<div class="txt2">
-		<h4 class="upper"><a href="#">Lorem ipsum dolor</a></h4>
-		sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse.
-	</div>
-</div>
 
-<a href="#" class="button1">news archive</a>
+                                <a href="#" class="button1">news archive</a>
 
 
 
 
 
 
-</div>
-</div>	
-</div>	
-</div>	
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<div class="bot1">
-<div class="container">
-<div class="row">
-<div class="span12">
-<div class="bot1_inner clearfix">
-	
-<div class="bot2 clearfix">
-<div class="menu_bot">
-    <ul id="menu_bot" class="clearfix">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="index-1.html">About Us</a></li>
-      <li><a href="index-2.html">Services</a></li>
-      <li><a href="index-3.html">Classes</a></li>
-      <li><a href="index-4.html">Gallery</a></li>
-      <li><a href="index-5.html">Contacts</a></li>          
-    </ul>
-</div>
-<div class="search-form-wrapper clearfix">
-<form id="search-form" action="search.php" method="GET" accept-charset="utf-8" class="navbar-form" >
-	<input type="text" name="s" value='Search' onBlur="if(this.value=='') this.value='Search'" onFocus="if(this.value =='Search' ) this.value=''">
-	<a href="#" onClick="document.getElementById('search-form').submit()"></a>
-</form>	
-</div>
-</div>
+                <div class="bot1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span12">
+                                <div class="bot1_inner clearfix">
 
-<footer><div class="copyright">Copyright   © 2013. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Privacy Policy</a></div></footer>
+                                    <div class="bot2 clearfix">
+                                        <div class="menu_bot">
+                                            <ul id="menu_bot" class="clearfix">
+                                                <li class="active"><a href="index.html">Home</a>
+                                                </li>
+                                                <li><a href="index-1.html">About Us</a>
+                                                </li>
+                                                <li><a href="index-2.html">Services</a>
+                                                </li>
+                                                <li><a href="index-3.html">Classes</a>
+                                                </li>
+                                                <li><a href="index-4.html">Gallery</a>
+                                                </li>
+                                                <li><a href="index-5.html">Contacts</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="search-form-wrapper clearfix">
+                                            <form id="search-form" action="search.php" method="GET" accept-charset="utf-8" class="navbar-form">
+                                                <input type="text" name="s" value='Search' onBlur="if(this.value=='') this.value='Search'" onFocus="if(this.value =='Search' ) this.value=''">
+                                                <a href="#" onClick="document.getElementById('search-form').submit()"></a>
+                                            </form>
+                                        </div>
+                                    </div>
 
-</div>
-</div>	
-</div>	
-</div>	
-</div>
+                                    <footer>
+                                        <div class="copyright">Copyright © 2013. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Privacy Policy</a>
+                                        </div>
+                                    </footer>
 
-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-</div>	
-</div>
-<script type="text/javascript" src="js/bootstrap.js"></script>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
+
 </html>
